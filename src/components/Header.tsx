@@ -47,11 +47,11 @@ const Header = () => {
 
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
-              Connexion
+            <Button variant="outline" size="sm" asChild>
+              <Link to="/login">Connexion</Link>
             </Button>
-            <Button size="sm" className="bg-gradient-to-r from-primary to-secondary">
-              Inscription
+            <Button size="sm" className="bg-gradient-to-r from-primary to-secondary" asChild>
+              <Link to="/register">Inscription</Link>
             </Button>
           </div>
 
@@ -87,11 +87,11 @@ const Header = () => {
                 </Link>
               ))}
               <div className="mt-4 pt-4 border-t border-border space-y-2">
-                <Button variant="outline" className="w-full justify-start">
-                  Connexion
+                <Button variant="outline" className="w-full justify-start" asChild>
+                  <Link to="/login">Connexion</Link>
                 </Button>
-                <Button className="w-full justify-start bg-gradient-to-r from-primary to-secondary">
-                  Inscription
+                <Button className="w-full justify-start bg-gradient-to-r from-primary to-secondary" asChild>
+                  <Link to="/register">Inscription</Link>
                 </Button>
               </div>
             </div>
