@@ -203,10 +203,10 @@ npm run build
 ## 📸 Captures d'écran
 
 ### Page d'accueil
-![Page d'accueil](/lovable-uploads/9e161846-0780-40a9-a612-2ad46378837a.png)
+![Page d'accueil](https://github.com/user-attachments/assets/f7932f4a-a5c3-467e-8f73-6d22aaf7ea32)
 
 ### Prise de rendez-vous
-![Prise de rendez-vous](/lovable-uploads/31c6afcd-225e-490c-88a8-0f0ac83ebed4.png)
+![Prise de rendez-vous](https://github.com/user-attachments/assets/847e8269-4594-42ea-a688-ef52b48238b0)
 
 ## 📧 Contact
 
