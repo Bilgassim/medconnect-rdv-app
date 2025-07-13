@@ -124,9 +124,29 @@ npm run dev
 cd backend
 composer install
 cp .env.example .env
+# Configurer les variables d'environnement dans .env
 php artisan key:generate
 php artisan migrate
 php artisan serve
+```
+
+## 🌐 Configuration pour le Déploiement
+
+### Variables d'environnement Frontend
+```bash
+# .env.local (pour le développement local)
+VITE_API_URL=http://localhost:8000/api
+
+# .env.production (pour la production)
+VITE_API_URL=https://votre-api-laravel.com/api
+```
+
+### Variables d'environnement Backend
+```bash
+# .env Laravel
+APP_URL=https://votre-api-laravel.com
+FRONTEND_URL=https://votre-frontend.netlify.app
+CORS_ALLOWED_ORIGINS=https://votre-frontend.netlify.app
 ```
 
 ## 📁 Structure du Projet
@@ -156,14 +176,37 @@ Le projet utilise un design system médical professionnel avec :
 ## 🚀 Déploiement
 
 ### Frontend
-- **Développement** : `npm run dev`
-- **Production** : `npm run build`
-- **Hébergement** : Netlify (recommandé)
+
+#### Netlify (Recommandé)
+1. Connecter votre repository GitHub à Netlify
+2. Configurer les paramètres de build :
+   - **Build command** : `npm run build`
+   - **Publish directory** : `dist`
+3. Le fichier `netlify.toml` configure automatiquement les redirections SPA
+
+#### Vercel
+1. Connecter votre repository à Vercel
+2. Les paramètres sont automatiquement détectés via `vercel.json`
+3. Deploy automatique à chaque push
+
+#### Manuel
+```bash
+npm run build
+# Uploadez le contenu du dossier 'dist' sur votre hébergeur
+```
 
 ### Backend
-- **Serveur** : Apache/Nginx avec PHP
-- **Base de données** : MySQL
-- **Hébergement** : VPS ou cloud provider
+- **Serveur** : Apache/Nginx avec PHP 8.1+
+- **Base de données** : MySQL 8.0+
+- **Hébergement** : VPS, AWS, DigitalOcean, etc.
+
+## 📸 Captures d'écran
+
+### Page d'accueil
+![Page d'accueil](/lovable-uploads/9e161846-0780-40a9-a612-2ad46378837a.png)
+
+### Prise de rendez-vous
+![Prise de rendez-vous](/lovable-uploads/31c6afcd-225e-490c-88a8-0f0ac83ebed4.png)
 
 ## 📧 Contact
 

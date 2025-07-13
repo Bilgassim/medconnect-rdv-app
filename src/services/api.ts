@@ -1,6 +1,6 @@
-const API_BASE_URL = import.meta.env.DEV 
-  ? 'http://localhost:8000/api'
-  : 'https://votre-domaine-laravel.com/api';
+import { config } from '@/config/environment';
+
+const API_BASE_URL = config.api.baseUrl;
 
 // Types
 export interface User {
